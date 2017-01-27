@@ -16,14 +16,14 @@
     },
     "vmSize": {
       "type": "string",
-      "defaultValue": "Standard_D1_v2",
+      "defaultValue": "Standard_NC6",
       "metadata": {
         "description": "Size of the nodes."
       }
     },
     "scaleNumber": {
       "type": "int",
-      "defaultValue": 2,
+      "defaultValue": 1,
       "metadata": {
         "description": "This template create N worker node. Use scaleNumber to specify that N."
       }
@@ -47,7 +47,7 @@
     "dnsName": "[concat('slurm-', uniqueString(resourceGroup().id))]",
     "imagePublisher": "Canonical",
     "imageOffer": "UbuntuServer",
-    "ubuntuOSVersion": "16.10",
+    "ubuntuOSVersion": "16.04-LTS",
     "publicIPAddressName": "publicip",
     "vmNameMaster": "master",
     "vmNameWorker": "worker",
